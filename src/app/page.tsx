@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Code, Database, Palette, Zap, Users, Brain, ChevronDown, ArrowRight } from 'lucide-react'
+import { Github, Linkedin, Mail, Code, Database, Palette, Zap, Brain, ChevronDown, ArrowRight } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import TechStack from '../components/TechStack'
 import ProjectShowcase from '../components/ProjectShowcase'
@@ -10,38 +10,7 @@ import StatsDashboard from '../components/StatsDashboard'
 
 
 
-const projects = [
-  {
-    title: "DheeSpace",
-    subtitle: "Real-time Collaborative Editor with AI + Multiplayer Magic",
-    description: "Notion meets Google Docs — reimagined with AI, live presence, and Gen-Z aesthetics. Features real-time multiplayer editing with CRDT sync (Liveblocks + Yjs), AI chat assistant powered by Gemini Pro 1.5, instant translation with formatting preservation, version history with diff-restore, beautiful PDF/DOCX export, and role-based access control with temporary document sharing.",
-    tech: ["Next.js 15", "Liveblocks", "Yjs", "Firebase Firestore", "Gemini 1.5 Pro", "Clerk Auth", "Puppeteer", "ShadCN UI"],
-    liveUrl: "https://dheespace.vercel.app",
-    githubUrl: "https://github.com/dheemanthm2004/DheeSpace.",
-    stats: "200+ docs created • 50+ users • Live production",
-    gradient: "from-violet-500 to-purple-600"
-  },
-  {
-    title: "DheeNotifications",
-    subtitle: "Scalable Email & SMS Notification Infrastructure",
-    description: "Full-stack, production-ready notification platform for sending, scheduling, and managing email/SMS notifications at scale. Built using Node.js, Redis, PostgreSQL, and Next.js with clean authentication, background job processing, and analytics. Features Redis-backed BullMQ engine with retry logic, exponential backoff, CRON-based scheduling, real-time analytics dashboard, CSV bulk upload, and comprehensive API documentation.",
-    tech: ["Node.js", "Express.js", "Redis", "BullMQ", "PostgreSQL", "Prisma ORM", "Twilio", "Docker", "Railway", "Chart.js"],
-    liveUrl: "https://dheenotifications.vercel.app",
-    githubUrl: "https://github.com/dheemanthm2004/notification_system",
-    stats: "1000+ messages processed • Live API • Swagger docs",
-    gradient: "from-blue-500 to-cyan-600"
-  },
-  {
-    title: "ResuScanX",
-    subtitle: "AI-Powered Resume vs Job Description Analyzer + ATS Checker",
-    description: "Smart web application that empowers job seekers by comparing their resume to any job description using AI, NLP, and ATS simulation. Delivers realistic match scores, identifies skill gaps, and gives actionable improvement tips. Features multi-AI provider orchestration (Gemini, Mistral, Cohere, OpenRouter) with fallback chains, ATS compatibility checker that simulates real parsing, visual analytics with Chart.js, and context-aware AI career coaching.",
-    tech: ["Next.js 14", "Node.js", "MongoDB", "Gemini API", "Mistral AI", "Cohere", "OpenRouter", "Chart.js", "Natural NLP", "pdf-parse"],
-    liveUrl: "https://resuscanx.vercel.app",
-    githubUrl: "https://github.com/dheemanthm2004/resuscanx",
-    stats: "100+ users analyzed • 4 AI providers • Free ATS tools",
-    gradient: "from-emerald-500 to-teal-600"
-  }
-]
+
 
 
 

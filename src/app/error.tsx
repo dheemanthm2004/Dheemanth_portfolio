@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { RefreshCw, Home } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Error({
   error,
@@ -30,15 +31,15 @@ export default function Error({
         >
           <span className="text-3xl">😵</span>
         </motion.div>
-        
+
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           Oops! Something went wrong
         </h2>
-        
+
         <p className="text-gray-600 mb-8">
           Don't worry, it's not you - it's me. Let's try to get you back on track.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={reset}
@@ -47,16 +48,16 @@ export default function Error({
             <RefreshCw className="w-4 h-4 mr-2" />
             Try Again
           </button>
-          
-          <a
+
+          <Link
             href="/"
             className="inline-flex items-center px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 hover:shadow-lg transform hover:scale-105 transition-all duration-200"
           >
             <Home className="w-4 h-4 mr-2" />
             Go Home
-          </a>
+          </Link>
         </div>
-        
+
         {process.env.NODE_ENV === 'development' && (
           <details className="mt-8 text-left">
             <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
