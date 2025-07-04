@@ -1,59 +1,51 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Palette, Zap, Users, Brain, ChevronDown, Star, ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Github, Linkedin, Mail, Code, Database, Palette, Zap, Users, Brain, ChevronDown, ArrowRight } from 'lucide-react'
 import Navigation from '../components/Navigation'
+import TechStack from '../components/TechStack'
+import ProjectShowcase from '../components/ProjectShowcase'
+import StatsDashboard from '../components/StatsDashboard'
 
-const skills = {
-  "Frontend": ["Next.js 15", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "ShadCN UI"],
-  "Backend": ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis", "Prisma"],
-  "AI/ML": ["Gemini Pro", "OpenRouter", "Mistral", "Cohere", "NLP", "LLM Integration"],
-  "DevOps": ["Docker", "Railway", "Vercel", "Firebase", "JWT", "RBAC"]
-}
+
 
 const projects = [
   {
     title: "DheeSpace",
-    subtitle: "Real-time Collaborative Editor with AI",
-    description: "Notion-style editor with CRDT sync, AI chat/translate, version history, and PDF/DOCX export. Built with Liveblocks + Yjs for real-time collaboration.",
-    tech: ["Next.js 15", "Liveblocks", "Firestore", "Gemini AI", "Clerk Auth"],
+    subtitle: "Real-time Collaborative Editor with AI + Multiplayer Magic",
+    description: "Notion meets Google Docs — reimagined with AI, live presence, and Gen-Z aesthetics. Features real-time multiplayer editing with CRDT sync (Liveblocks + Yjs), AI chat assistant powered by Gemini Pro 1.5, instant translation with formatting preservation, version history with diff-restore, beautiful PDF/DOCX export, and role-based access control with temporary document sharing.",
+    tech: ["Next.js 15", "Liveblocks", "Yjs", "Firebase Firestore", "Gemini 1.5 Pro", "Clerk Auth", "Puppeteer", "ShadCN UI"],
     liveUrl: "https://dheespace.vercel.app",
     githubUrl: "https://github.com/dheemanthm2004/DheeSpace.",
-    stats: "200+ docs created by 50+ users",
-    gradient: "from-purple-500 to-pink-500"
+    stats: "200+ docs created • 50+ users • Live production",
+    gradient: "from-violet-500 to-purple-600"
   },
   {
     title: "DheeNotifications",
-    subtitle: "Scalable Notification Infrastructure",
-    description: "Production-grade messaging platform with Redis-backed BullMQ, email/SMS delivery, analytics dashboard, and CSV bulk operations.",
-    tech: ["Node.js", "Redis", "BullMQ", "PostgreSQL", "Twilio", "Docker"],
+    subtitle: "Scalable Email & SMS Notification Infrastructure",
+    description: "Full-stack, production-ready notification platform for sending, scheduling, and managing email/SMS notifications at scale. Built using Node.js, Redis, PostgreSQL, and Next.js with clean authentication, background job processing, and analytics. Features Redis-backed BullMQ engine with retry logic, exponential backoff, CRON-based scheduling, real-time analytics dashboard, CSV bulk upload, and comprehensive API documentation.",
+    tech: ["Node.js", "Express.js", "Redis", "BullMQ", "PostgreSQL", "Prisma ORM", "Twilio", "Docker", "Railway", "Chart.js"],
     liveUrl: "https://dheenotifications.vercel.app",
     githubUrl: "https://github.com/dheemanthm2004/notification_system",
-    stats: "1000+ messages processed",
-    gradient: "from-blue-500 to-cyan-500"
+    stats: "1000+ messages processed • Live API • Swagger docs",
+    gradient: "from-blue-500 to-cyan-600"
   },
   {
     title: "ResuScanX",
-    subtitle: "AI Resume Analyzer + ATS Checker",
-    description: "Multi-AI platform using Gemini, Mistral, and Cohere to analyze resume-job compatibility with ATS simulation and career coaching.",
-    tech: ["Next.js", "MongoDB", "Gemini API", "NLP", "Chart.js"],
+    subtitle: "AI-Powered Resume vs Job Description Analyzer + ATS Checker",
+    description: "Smart web application that empowers job seekers by comparing their resume to any job description using AI, NLP, and ATS simulation. Delivers realistic match scores, identifies skill gaps, and gives actionable improvement tips. Features multi-AI provider orchestration (Gemini, Mistral, Cohere, OpenRouter) with fallback chains, ATS compatibility checker that simulates real parsing, visual analytics with Chart.js, and context-aware AI career coaching.",
+    tech: ["Next.js 14", "Node.js", "MongoDB", "Gemini API", "Mistral AI", "Cohere", "OpenRouter", "Chart.js", "Natural NLP", "pdf-parse"],
     liveUrl: "https://resuscanx.vercel.app",
     githubUrl: "https://github.com/dheemanthm2004/resuscanx",
-    stats: "100+ users analyzed",
-    gradient: "from-emerald-500 to-teal-500"
+    stats: "100+ users analyzed • 4 AI providers • Free ATS tools",
+    gradient: "from-emerald-500 to-teal-600"
   }
 ]
 
-const achievements = [
-  { number: "300+", label: "LeetCode Problems", icon: Code },
-  { number: "3", label: "Production Apps", icon: Zap },
-  { number: "9.08", label: "CGPA", icon: Star },
-  { number: "350+", label: "Active Users", icon: Users }
-]
+
 
 export default function Portfolio() {
-  const [activeSkill, setActiveSkill] = useState("Frontend")
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -78,6 +70,23 @@ export default function Portfolio() {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Profile Image */}
+            <motion.div
+              className="mb-8"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative w-32 h-32 mx-auto">
+                <img 
+                  src="https://lnk.ink/Rm7MD"
+                  alt="Dheemanth M"
+                  className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+              </div>
+            </motion.div>
+            
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Dheemanth M
@@ -90,7 +99,7 @@ export default function Portfolio() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              Full-Stack Developer crafting AI-powered, real-time web experiences
+              CSE undergrad building production-grade fullstack projects with AI/NLP, real-time collaboration, and scalable infrastructure
             </motion.p>
 
             <motion.div 
@@ -158,174 +167,83 @@ export default function Portfolio() {
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               About Me
             </h2>
-            <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                I'm a Computer Science student at <strong>BMS College of Engineering</strong> (CGPA: 9.08/10) 
-                with a passion for building production-grade applications that solve real problems. 
-                My expertise spans from AI-powered platforms to real-time collaborative systems.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Currently maintaining <strong>3 live applications</strong> with <strong>350+ active users</strong>, 
-                I focus on creating scalable, user-centric solutions using modern technologies like Next.js, 
-                AI/ML APIs, and distributed systems.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                From Bangalore, India 🇮🇳 • Solved <strong>300+ LeetCode problems</strong> • 
-                Former School Vice Captain & Cultural Secretary • IEEE Volunteer at BMSCE
-              </p>
-            </div>
           </motion.div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <achievement.icon className="w-8 h-8 mx-auto mb-4 text-purple-600" />
-                <div className="text-3xl font-bold text-gray-900 mb-2">{achievement.number}</div>
-                <div className="text-sm text-gray-600">{achievement.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-gradient-to-r from-purple-50 to-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Technical Skills
-            </h2>
-          </motion.div>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {Object.keys(skills).map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveSkill(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
-                  activeSkill === category
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                    : 'bg-white/80 text-gray-700 hover:bg-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          <AnimatePresence mode="wait">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Main content */}
             <motion.div
-              key={activeSkill}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="flex flex-wrap justify-center gap-4"
+              className="space-y-6"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              {skills[activeSkill as keyof typeof skills].map((skill, index) => (
-                <motion.div
-                  key={skill}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-lg shadow-md border border-white/20 text-gray-700 font-medium"
-                >
-                  {skill}
-                </motion.div>
-              ))}
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <span className="text-2xl mr-3">👨‍💻</span>
+                  Who I Am
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  I'm a passionate Computer Science student at <strong>BMS College of Engineering, Bangalore</strong>, 
+                  currently in my 3rd year with a CGPA of <strong>9.08/10</strong>. What sets me apart is my hands-on 
+                  approach to learning - I don't just study concepts, I build real applications that solve actual problems.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  My journey in tech started with curiosity about how things work behind the scenes. Today, I've 
+                  transformed that curiosity into <strong>3 production-grade applications</strong> serving real users worldwide, 
+                  with expertise spanning full-stack development, AI integration, and scalable system architecture.
+                </p>
+              </div>
             </motion.div>
-          </AnimatePresence>
-        </div>
-      </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Featured Projects
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Production-grade applications built with modern technologies, serving real users worldwide.
-            </p>
-          </motion.div>
-
-          <div className="grid gap-8 md:gap-12">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 items-center`}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex-1">
-                  <div className={`p-8 bg-gradient-to-br ${project.gradient} rounded-2xl shadow-2xl`}>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                      <p className="text-purple-600 font-semibold mb-4">{project.subtitle}</p>
-                      <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
-                      
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tech.map((tech) => (
-                          <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-500 font-medium">{project.stats}</span>
-                        <div className="flex gap-3">
-                          <a 
-                            href={project.liveUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Live Demo
-                          </a>
-                          <a 
-                            href={project.githubUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200"
-                          >
-                            <Github className="w-4 h-4 mr-2" />
-                            Code
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+            {/* Right side - Skills & Interests */}
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <span className="text-2xl mr-3">🚀</span>
+                  What I Do
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700"><strong>Full-Stack Development:</strong> Building end-to-end applications with modern frameworks like Next.js, React, and Node.js</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700"><strong>AI Integration:</strong> Implementing LLM-powered features using Gemini, OpenAI, and other cutting-edge AI APIs</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700"><strong>System Architecture:</strong> Designing scalable backends with Redis, PostgreSQL, and queue-based processing</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700"><strong>Problem Solving:</strong> Solved 300+ LeetCode problems with strong DSA foundation</p>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
+
+          {/* Bottom section - Personal touch */}
+          
         </div>
       </section>
+
+      {/* Enhanced Tech Stack Component */}
+      <TechStack />
+
+      {/* Enhanced Projects Section */}
+      <ProjectShowcase />
+
+      {/* Stats Dashboard */}
+      <StatsDashboard />
 
       {/* Education Section */}
       <section id="education" className="py-20 px-4">
@@ -469,13 +387,39 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400">
-            © 2025 Dheemanth M. Built with Next.js, TypeScript, and lots of ☕
-          </p>
-        </div>
-      </footer>
+      <footer className="py-10 px-4 bg-gradient-to-br from-purple-50 via-white to-blue-100 text-gray-800 relative overflow-hidden">
+  {/* Soft background glow */}
+  <div className="absolute -top-10 -left-10 w-40 h-40 bg-purple-300 rounded-full opacity-20 blur-3xl animate-blob"></div>
+  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-300 rounded-full opacity-20 blur-3xl animate-blob animation-delay-4000"></div>
+
+  <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center justify-center gap-5">
+    
+    {/* Instagram Only */}
+    <a 
+      href="https://www.instagram.com/dheemanth._m" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="hover:text-pink-500 transition duration-300"
+    >
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Z" />
+        <path d="M15.25 11.25a3.75 3.75 0 1 1-6.5 2.651 3.75 3.75 0 0 1 6.5-2.651Z" />
+        <path d="M17.5 6.51v.008h.01v-.009h-.01Z" />
+      </svg>
+    </a>
+
+    {/* Signature */}
+    <p className="text-sm italic font-serif text-gray-600 tracking-wide">
+      Made with <span className="text-red-500">❤️</span> by <span className="text-gray-800">Dheem</span>
+    </p>
+
+    {/* Back to top */}
+    <a href="#home" className="text-xs text-gray-500 hover:text-gray-800 transition duration-300 underline">
+      Back to top ↑
+    </a>
+  </div>
+</footer>
+
 
       <style jsx>{`
         @keyframes blob {
