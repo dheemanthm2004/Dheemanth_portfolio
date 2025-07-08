@@ -337,7 +337,7 @@ export default function Portfolio() {
                   <Linkedin className="w-6 h-6 text-blue-600" />
                 </a>
                 <a 
-                  href="https://leetcode.com/u/7e231YE1V6/" 
+                  href="https://leetcode.com/u/dhee_vampire/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-4 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-200"

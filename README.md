@@ -64,7 +64,7 @@ To customize this portfolio for your own use:
 - **Email**: dheemanthm.official@gmail.com
 - **LinkedIn**: [Dheemanth Madaiah](https://www.linkedin.com/in/dheemanth-madaiah-484a43327/)
 - **GitHub**: [dheemanthm2004](https://github.com/dheemanthm2004)
-- **LeetCode**: [7e231YE1V6](https://leetcode.com/u/7e231YE1V6/)
+- **LeetCode**: [dhee_vampire](https://leetcode.com/u/dhee_vampire/)
 
 ---
 

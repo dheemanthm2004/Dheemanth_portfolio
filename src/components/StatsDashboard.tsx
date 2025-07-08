@@ -39,7 +39,7 @@ export default function StatsDashboard() {
             <div className="text-center mb-4">
               <h3 className="text-lg font-semibold text-gray-800 mb-2">LeetCode Progress</h3>
               <a 
-                href="https://leetcode.com/u/7e231YE1V6/" 
+                href="https://leetcode.com/u/dhee_vampire/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-orange-600 hover:text-orange-700 text-sm"
@@ -49,7 +49,7 @@ export default function StatsDashboard() {
             </div>
             <div className="flex justify-center">
               <img 
-                src="https://leetcard.jacoblin.cool/7e231YE1V6?theme=unicorn&ext=contest" 
+                src="https://leetcard.jacoblin.cool/dhee_vampire?theme=unicorn&ext=contest" 
                 alt="LeetCode Stats"
                 className="rounded-lg shadow-md max-w-full h-auto"
                 loading="lazy"
