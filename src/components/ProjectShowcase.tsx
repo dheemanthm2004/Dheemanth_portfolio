@@ -30,7 +30,7 @@ const projects = [
     icon: Zap,
     stats: "100+ users analyzed • 4 AI providers • Free ATS tools",
     highlights: ["Multi-LLM orchestration", "Real ATS simulation", "Career insights", "Fallback AI chains"],
-    image: "https://i.ibb.co/hx0VcWPc/Screenshot-2025-07-01-014940.png"
+    image: "https://i.ibb.co/TMVbBS1d/image.png"
   },
   {
     title: "DheeNotifications",
@@ -44,7 +44,7 @@ const projects = [
     icon: Database,
     stats: "1000+ messages processed • Live API • Swagger docs",
     highlights: ["Fault-tolerant queues", "Real-time dashboard", "Scalable architecture", "Production deployment"],
-    image: "https://i.ibb.co/wFFR1XCB/Screenshot-2025-07-05-014034.png"
+    image: "https://i.ibb.co/21nN5LWS/image.png"
   }
 ]
 
