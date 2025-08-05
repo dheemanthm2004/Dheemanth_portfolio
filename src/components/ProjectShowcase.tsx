@@ -5,18 +5,18 @@ import { ExternalLink, Github, Play, Code2, Database, Zap, Users, FileText, BarC
 
 const projects = [
   {
-    title: "DheeSpace",
+    title: "LiveDocs",
     subtitle: "Real-time Collaborative Editor with AI + Multiplayer Magic",
     description: "Notion meets Google Docs — reimagined with AI, live presence, and Gen-Z aesthetics. Built from scratch using bleeding-edge full-stack tools. Features real-time multiplayer editing with CRDT sync (Liveblocks + Yjs), AI chat assistant powered by Gemini Pro 1.5, instant translation with formatting preservation, version history with diff-restore, beautiful PDF/DOCX export, and role-based access control with temporary document sharing.",
     tech: ["Next.js 15", "Liveblocks", "Yjs", "Firebase Firestore", "Gemini 1.5 Pro", "Clerk Auth", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
-    liveUrl: "https://dheespace.vercel.app",
+    liveUrl: "https://livedocsai.vercel.app",
     githubUrl: "https://github.com/dheemanthm2004/DheeSpace.",
     gradient: "from-violet-500 to-purple-600",
     features: ["Live Cursors & Avatars", "AI Chat & Translate", "Version History with Diffs", "PDF/DOCX Export", "Temporary Public Docs", "RBAC Invite System"],
     icon: Code2,
     stats: "200+ docs created • 50+ users • Live production",
     highlights: ["Real-time CRDT sync", "AI-powered workflows", "Production-grade auth", "Temporary sharing"],
-    image: "https://i.ibb.co/LHqXhN8/Screenshot-2025-06-25-012039.png"
+    image: "https://i.ibb.co/S7r4xdKf/image.png"
   },
   {
     title: "ResuScanX",
@@ -33,18 +33,18 @@ const projects = [
     image: "https://i.ibb.co/TMVbBS1d/image.png"
   },
   {
-    title: "DheeNotifications",
-    subtitle: "Scalable Email & SMS Notification Infrastructure",
+    title: "NotifyOps",
+    subtitle: "Scalable Email & SMS Notification Delivery Platform",
     description: "Full-stack, production-ready notification platform for sending, scheduling, and managing email/SMS notifications at scale. Built using Node.js, Redis, PostgreSQL, and Next.js with clean authentication, background job processing, and analytics. Features Redis-backed BullMQ engine with retry logic, exponential backoff, CRON-based scheduling, real-time analytics dashboard, CSV bulk upload, and comprehensive API documentation.",
     tech: ["Node.js", "Express.js", "Redis", "BullMQ", "PostgreSQL", "Prisma ORM", "Twilio", "SMTP", "Docker", "Railway", "Next.js", "Chart.js"],
-    liveUrl: "https://dheenotifications.vercel.app",
+    liveUrl: "https://notifyopss.vercel.app",
     githubUrl: "https://github.com/dheemanthm2004/notification_system",
     gradient: "from-blue-500 to-cyan-600",
     features: ["Background Job Queues", "CRON Scheduling", "Real-time Analytics", "CSV Bulk Upload", "Multi-channel Delivery", "Retry & Rate Limiting"],
     icon: Database,
     stats: "1000+ messages processed • Live API • Swagger docs",
     highlights: ["Fault-tolerant queues", "Real-time dashboard", "Scalable architecture", "Production deployment"],
-    image: "https://i.ibb.co/21nN5LWS/image.png"
+    image: "https://i.ibb.co/whXFqfnQ/image.png"
   }
 ]
 
