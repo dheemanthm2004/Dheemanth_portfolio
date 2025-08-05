@@ -154,7 +154,7 @@ export default function Portfolio() {
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
                   I'm a passionate Computer Science student at <strong>BMS College of Engineering, Bangalore</strong>, 
-                  currently in my final year with a CGPA of <strong>9.08/10</strong>. What sets me apart is my hands-on 
+                  currently in my final year with a CGPA of <strong>9.09/10</strong>. What sets me apart is my hands-on 
                   approach to learning - I don't just study concepts, I build real applications that solve actual problems.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -244,7 +244,7 @@ export default function Portfolio() {
                   <p className="text-gray-600">2022 – 2026</p>
                 </div>
                 <div className="mt-4 md:mt-0 text-right">
-                  <div className="text-3xl font-bold text-green-600">9.08</div>
+                  <div className="text-3xl font-bold text-green-600">9.09</div>
                   <div className="text-sm text-gray-600">CGPA / 10</div>
                 </div>
               </div>

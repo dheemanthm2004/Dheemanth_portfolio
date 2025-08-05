@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Dheemanth M - Full-Stack Developer & AI Enthusiast | Portfolio",
-  description: "CSE student at BMSCE with 9.08 CGPA building production-grade AI-powered applications. 3 live projects serving 350+ users. Expertise in Next.js, Node.js, AI integration, and scalable systems.",
+  description: "CSE student at BMSCE with 9.09 CGPA building production-grade AI-powered applications. 3 live projects serving 350+ users. Expertise in Next.js, Node.js, AI integration, and scalable systems.",
   keywords: [
     "Dheemanth M", "Dheemanth Madaiah", "Full Stack Developer", "AI Developer", 
     "Next.js Developer", "React Developer", "Node.js", "TypeScript", "Portfolio",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Dheemanth M - Full-Stack Developer & AI Enthusiast",
-    description: "CSE student building production-grade AI applications. 3 live projects, 350+ users, 9.08 CGPA. Expertise in Next.js, AI integration & scalable systems.",
+    description: "CSE student building production-grade AI applications. 3 live projects, 350+ users, 9.09 CGPA. Expertise in Next.js, AI integration & scalable systems.",
     url: "https://dheemanthm.vercel.app",
     siteName: "Dheemanth M - Portfolio",
     images: [
