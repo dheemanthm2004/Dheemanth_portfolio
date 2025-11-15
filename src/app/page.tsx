@@ -46,14 +46,14 @@ export default function Portfolio() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              {/* <div className="relative w-32 h-32 mx-auto">
+              <div className="relative w-32 h-32 mx-auto">
                 <img 
-                  src="https://i.ibb.co/JM48D5j/17404210725121.jpg"
+                  src="https://i.ibb.co/JM48D5j/1740421072512.jpg"
                   alt="Dheemanth M"
                   className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl"
                 />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-              </div> */}
+              </div>
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
