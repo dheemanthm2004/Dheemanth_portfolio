@@ -48,7 +48,7 @@ export default function Portfolio() {
             >
               <div className="relative w-32 h-32 mx-auto">
                 <img 
-                  src="https://i.ibb.co/JM48D5j/1740421072512.jpg"
+                  src="https://i.ibb.co/JM48D5j/17404210725121.jpg"
                   alt="Dheemanth M"
                   className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl"
                 />
