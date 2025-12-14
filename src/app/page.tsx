@@ -48,7 +48,7 @@ export default function Portfolio() {
             >
               <div className="relative w-32 h-32 mx-auto">
                 <img 
-                  src="https://i.ibb.co/JM48D5j/1740421072512.jpg"
+                  src="https://i.ibb.co/Swx1LDfw/Whats-App-Image-2025-12-14-at-17-44-52-c2b35181.jpg"
                   alt="Dheemanth M"
                   className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl"
                 />
@@ -193,7 +193,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                    <p className="text-gray-700"><strong>Problem Solving:</strong> Solved 300+ LeetCode problems with strong DSA foundation</p>
+                    <p className="text-gray-700"><strong>Problem Solving:</strong> Solved 400+ LeetCode problems with strong DSA foundation</p>
                   </div>
                 </div>
               </div>

@@ -57,7 +57,7 @@ export default function StatsDashboard() {
             </div>
             <div className="text-center mt-4">
               <div className="text-sm text-gray-600">
-                <strong>300+ Problems Solved</strong> • Strong DSA Foundation
+                <strong>400+ Problems Solved</strong> • Strong DSA Foundation
               </div>
             </div>
           </motion.div>
