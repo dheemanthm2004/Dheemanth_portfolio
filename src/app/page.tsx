@@ -68,7 +68,7 @@ export default function Portfolio() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              CSE undergrad building production-grade fullstack projects with AI/NLP, real-time collaboration, and scalable infrastructure
+              SDE Intern @ IBM ISL (SevOne) · CSE undergrad building production-grade fullstack systems with AI/NLP, real-time collaboration, and distributed infrastructure
             </motion.p>
 
             <motion.div 
@@ -80,7 +80,7 @@ export default function Portfolio() {
               {[
                 { icon: Brain, text: "AI Integration" },
                 { icon: Zap, text: "Real-time Systems" },
-                { icon: Database, text: "Scalable Backend" },
+                { icon: Database, text: "Distributed Systems" },
                 { icon: Palette, text: "Modern UI/UX" }
               ].map((item, index) => (
                 <div key={index} className="flex items-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20">
@@ -160,7 +160,7 @@ export default function Portfolio() {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   My journey in tech started with curiosity about how things work behind the scenes. Today, I've 
                   transformed that curiosity into <strong>3 production-grade applications</strong> serving real users worldwide, 
-                  with expertise spanning full-stack development, AI integration, and scalable system architecture.
+                  with expertise spanning full-stack development, AI integration, and scalable system architecture. I'm currently interning at <strong>IBM ISL (SevOne)</strong>, working on distributed Go/gRPC services for enterprise network management.
                 </p>
               </div>
             </motion.div>
@@ -190,6 +190,10 @@ export default function Portfolio() {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                     <p className="text-gray-700"><strong>System Architecture:</strong> Designing scalable backends with Redis, PostgreSQL, and queue-based processing</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700"><strong>Distributed Systems:</strong> Building Go/gRPC microservices and SNMP validation pipelines at IBM ISL (SevOne)</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
@@ -385,7 +389,7 @@ export default function Portfolio() {
               Let's Build Something Amazing
             </h2>
             <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-              I'm seeking backend/fullstack SDE roles with scale, ownership, and system-level problem solving. 
+              Currently interning at IBM ISL (SevOne), working on distributed Go/gRPC systems. Seeking backend/fullstack SDE roles with scale, ownership, and system-level problem solving.
               Let's connect and create something extraordinary together.
             </p>
 
@@ -428,7 +432,7 @@ export default function Portfolio() {
 
             <div className="text-center">
               <p className="text-sm text-gray-500 mb-2">📍 Bangalore, India • 📱 +91 96864 90654</p>
-              <p className="text-sm text-gray-500">Open to internships and full-time opportunities</p>
+              <p className="text-sm text-gray-500">Open to full-time SDE opportunities from 2026</p>
             </div>
           </motion.div>
         </div>
