@@ -154,7 +154,7 @@ export default function Portfolio() {
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
                   I'm a passionate Computer Science student at <strong>BMS College of Engineering, Bangalore</strong>, 
-                  currently in my final year with a CGPA of <strong>9.09/10</strong>. What sets me apart is my hands-on 
+                  currently in my final year with a CGPA of <strong>9.08/10</strong>. What sets me apart is my hands-on 
                   approach to learning - I don't just study concepts, I build real applications that solve actual problems.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -208,6 +208,85 @@ export default function Portfolio() {
       {/* Enhanced Tech Stack Component */}
       <TechStack />
 
+      {/* Experience Section */}
+      <section id="experience" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Experience
+            </h2>
+          </motion.div>
+
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            {/* Timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-400 to-blue-400 hidden md:block"></div>
+
+            <div className="md:pl-20 relative">
+              {/* Timeline dot */}
+              <div className="absolute left-6 top-8 w-4 h-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border-2 border-white shadow-lg hidden md:block"></div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-1">Software Engineering Intern</h3>
+                    <p className="text-lg font-semibold text-purple-600 mb-1">IBM ISL (SevOne) · Bangalore, India</p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700 border border-green-200">
+                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5 animate-pulse"></span>
+                        Current
+                      </span>
+                      <span className="text-sm text-gray-500">Jan 2026 – Present</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 md:mt-0">
+                    <div className="flex flex-wrap gap-2 justify-start md:justify-end">
+                      {['Go', 'gRPC', 'SNMP', 'MIB', 'PHP', 'Distributed Systems'].map(tag => (
+                        <span key={tag} className="px-3 py-1 bg-gradient-to-r from-purple-50 to-blue-50 text-purple-700 text-xs font-medium rounded-full border border-purple-100">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Eliminated inconsistencies between SevOne NMS UI and backend by unifying SNMP OID validation across <strong>Go (gRPC)</strong> services, ensuring consistent API behavior.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Designed and implemented an OID validation pipeline converting textual OIDs to numeric format using <strong>MIB databases</strong>, handling vendor-specific edge cases.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Integrated <strong>requestd</strong> and <strong>mibd</strong> into the validation flow, resolving discrepancies across distributed components (UI → PHP → Go → requestd → mibd).
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Enhanced Projects Section */}
       <ProjectShowcase />
 
@@ -244,7 +323,7 @@ export default function Portfolio() {
                   <p className="text-gray-600">2022 – 2026</p>
                 </div>
                 <div className="mt-4 md:mt-0 text-right">
-                  <div className="text-3xl font-bold text-green-600">9.09</div>
+                  <div className="text-3xl font-bold text-green-600">9.08</div>
                   <div className="text-sm text-gray-600">CGPA / 10</div>
                 </div>
               </div>

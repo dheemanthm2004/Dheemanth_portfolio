@@ -14,6 +14,11 @@ const techCategories = [
     icons: "nodejs,express,mongodb,postgres,redis,prisma"
   },
   {
+    title: "Systems & Protocols",
+    description: "Building high-performance distributed systems with Go, gRPC microservices, and low-level network protocols",
+    icons: "go,php,linux"
+  },
+  {
     title: "DevOps & Deployment",
     description: "Streamlining development workflows with containerization and cloud deployment strategies",
     icons: "docker,vercel,git,github"
@@ -53,7 +58,7 @@ export default function TechStack() {
           >
             <div className="relative">
               <img 
-                src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,redis,docker,tailwind,prisma,vercel,git,github,ai,py" 
+                src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,redis,docker,tailwind,prisma,go,php,vercel,git,github,ai,py" 
                 alt="Tech Stack"
                 className="max-w-full h-auto rounded-2xl shadow-2xl border-4 border-white/50"
               />
@@ -65,7 +70,7 @@ export default function TechStack() {
           </motion.div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {techCategories.map((category, index) => (
             <motion.div
               key={category.title}
