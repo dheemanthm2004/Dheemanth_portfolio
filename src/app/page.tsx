@@ -56,14 +56,14 @@ export default function Portfolio() {
               </div>
             </motion.div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 px-4">
               <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Dheemanth M
               </span>
             </h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed px-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -256,7 +256,7 @@ export default function Portfolio() {
                         <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5 animate-pulse"></span>
                         Current
                       </span>
-                      <span className="text-sm text-gray-500">Jan 2026 – Present</span>
+                      <span className="text-sm text-gray-500">Jan 2025 – Present</span>
                     </div>
                   </div>
                   <div className="mt-4 md:mt-0">
@@ -418,10 +418,10 @@ export default function Portfolio() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <a 
                 href="mailto:dheemanthm.official@gmail.com"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto justify-center max-w-xs"
               >
-                <Mail className="w-5 h-5 mr-3" />
-                dheemanthm.official@gmail.com
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 flex-shrink-0" />
+                <span className="truncate">dheemanthm.official@gmail.com</span>
               </a>
               
               <div className="flex gap-4">
