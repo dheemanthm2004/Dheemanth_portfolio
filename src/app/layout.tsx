@@ -8,13 +8,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dheemanth M - Full-Stack Developer & AI Enthusiast | Portfolio",
-  description: "CSE student at BMSCE with 9.08 CGPA building production-grade AI-powered applications. 3 live projects serving 350+ users. Expertise in Next.js, Node.js, AI integration, and scalable systems.",
+  title: "Dheemanth M - Software Engineer @ IBM ISL | Full-Stack Developer",
+  description: "Software Engineering Intern at IBM ISL (SevOne) working on distributed Go/gRPC services. CS graduate from BMSCE with 9.14 CGPA. Expertise in React, TypeScript, Go, PostgreSQL, and scalable production systems.",
   keywords: [
-    "Dheemanth M", "Dheemanth Madaiah", "Full Stack Developer", "AI Developer", 
-    "Next.js Developer", "React Developer", "Node.js", "TypeScript", "Portfolio",
-    "BMSCE", "Computer Science", "Bangalore Developer", "AI Integration",
-    "Real-time Applications", "DheeSpace", "ResuScanX", "DheeNotifications"
+    "Dheemanth M", "Dheemanth Madaiah", "Software Engineer", "IBM ISL", "SevOne",
+    "Full Stack Developer", "Go Developer", "gRPC", "React Developer", "TypeScript",
+    "Next.js Developer", "Node.js", "PostgreSQL", "Distributed Systems", "Portfolio",
+    "BMSCE", "Computer Science", "Bangalore Developer", "Protocol Buffers",
+    "Playwright", "Production Engineer", "Backend Developer"
   ],
   authors: [{ name: "Dheemanth M", url: "https://github.com/dheemanthm2004" }],
   creator: "Dheemanth M",
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Dheemanth M - Full-Stack Developer & AI Enthusiast",
-    description: "CSE student building production-grade AI applications. 3 live projects, 350+ users, 9.08 CGPA. Expertise in Next.js, AI integration & scalable systems.",
+    title: "Dheemanth M - Software Engineer @ IBM ISL | Full-Stack Developer",
+    description: "Software Engineering Intern at IBM ISL (SevOne). Building distributed Go/gRPC services, React frontends, and production SaaS features. BMSCE CS grad with 9.14 CGPA.",
     url: "https://dheemanthm.vercel.app",
     siteName: "Dheemanth M - Portfolio",
     images: [
@@ -42,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dheemanth M - Full-Stack Developer & AI Enthusiast",
-    description: "Building production-grade AI applications with Next.js, Node.js. 3 live projects serving 350+ users.",
+    title: "Dheemanth M - Software Engineer @ IBM ISL | Full-Stack Developer",
+    description: "Building production features at IBM ISL (SevOne) with React, TypeScript, Go, gRPC. BMSCE CS graduate with 9.14 CGPA.",
     creator: "@dheemanthm2004",
     images: ["/profile.jpg"],
   },

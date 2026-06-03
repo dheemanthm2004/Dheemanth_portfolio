@@ -48,7 +48,7 @@ export default function Portfolio() {
             >
               <div className="relative w-32 h-32 mx-auto">
                 <img 
-                  src="https://i.ibb.co/MHjX4WC/Whats-App-Image-2025-12-14-at-17-44-49-17d9ea2e.jpg"
+                  src="https://i.ibb.co/MHjX4WC/Whats-App-Image-2026-12-14-at-17-44-49-17d9ea2e.jpg"
                   alt="Dheemanth M"
                   className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl"
                 />
@@ -68,7 +68,7 @@ export default function Portfolio() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              SDE Intern @ IBM ISL (SevOne) · CSE undergrad building production-grade fullstack systems with AI/NLP, real-time collaboration, and distributed infrastructure
+              Software Engineering Intern @ IBM ISL (SevOne) · Building distributed Go/gRPC services for enterprise SaaS · Full-stack developer with expertise in React, TypeScript, PostgreSQL, and scalable systems
             </motion.p>
 
             <motion.div 
@@ -153,14 +153,15 @@ export default function Portfolio() {
                   Who I Am
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  I'm a passionate Computer Science student at <strong>BMS College of Engineering, Bangalore</strong>, 
-                  currently in my final year with a CGPA of <strong>9.08/10</strong>. What sets me apart is my hands-on 
-                  approach to learning - I don't just study concepts, I build real applications that solve actual problems.
+                  I'm a passionate Computer Science graduate from             <strong>     BMS College of Engineering, Bangalore </strong> 
+                   with a CGPA of <strong>9.14/10</strong>. What sets me apart is my hands-on approach to learning and 
+                  building - I don't just study concepts, I ship production features that solve real problems.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  My journey in tech started with curiosity about how things work behind the scenes. Today, I've 
-                  transformed that curiosity into <strong>3 production-grade applications</strong> serving real users worldwide, 
-                  with expertise spanning full-stack development, AI integration, and scalable system architecture. I'm currently interning at <strong>IBM ISL (SevOne)</strong>, working on distributed Go/gRPC services for enterprise network management.
+                  Currently working as a <strong>Software Engineering Intern at IBM ISL (SevOne)</strong>, where I develop and ship 
+                  production features for SevOne Data Insight, a SaaS network monitoring platform. I work with <strong>React, TypeScript, Go, 
+                  gRPC, SQL, and Playwright</strong>, building distributed systems and solving complex backend challenges. Strong foundation 
+                  in DSA (400+ LeetCode problems) and core CS fundamentals (DBMS, OS, Computer Networks).
                 </p>
               </div>
             </motion.div>
@@ -193,10 +194,14 @@ export default function Portfolio() {
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
-                    <p className="text-gray-700"><strong>Distributed Systems:</strong> Building Go/gRPC microservices and SNMP validation pipelines at IBM ISL (SevOne)</p>
+                    <p className="text-gray-700"><strong>Distributed Systems:</strong> Building Go/gRPC microservices, Protocol Buffers, and feature flag frameworks at IBM</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700"><strong>Testing & Quality:</strong> Writing Playwright tests and fixing production bugs across distributed services</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
                     <p className="text-gray-700"><strong>Problem Solving:</strong> Solved 400+ LeetCode problems with strong DSA foundation</p>
                   </div>
                 </div>
@@ -251,12 +256,12 @@ export default function Portfolio() {
                         <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5 animate-pulse"></span>
                         Current
                       </span>
-                      <span className="text-sm text-gray-500">Jan 2026 – Present</span>
+                      <span className="text-sm text-gray-500">Jan 2025 – Present</span>
                     </div>
                   </div>
                   <div className="mt-4 md:mt-0">
                     <div className="flex flex-wrap gap-2 justify-start md:justify-end">
-                      {['Go', 'gRPC', 'SNMP', 'MIB', 'PHP', 'Distributed Systems'].map(tag => (
+                      {['React', 'TypeScript', 'Go', 'gRPC', 'SQL', 'Protocol Buffers', 'Playwright'].map(tag => (
                         <span key={tag} className="px-3 py-1 bg-gradient-to-r from-purple-50 to-blue-50 text-purple-700 text-xs font-medium rounded-full border border-purple-100">
                           {tag}
                         </span>
@@ -269,19 +274,36 @@ export default function Portfolio() {
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-gray-700 leading-relaxed">
-                      Eliminated inconsistencies between SevOne NMS UI and backend by unifying SNMP OID validation across <strong>Go (gRPC)</strong> services, ensuring consistent API behavior.
+                      Developed and shipped production features, feature flags, and bug fixes for <strong>SevOne Data Insight</strong>, a SaaS network 
+                      monitoring platform, using <strong>React, TypeScript, Go, SQL, Protocol Buffers, and Playwright</strong>.
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-gray-700 leading-relaxed">
-                      Designed and implemented an OID validation pipeline converting textual OIDs to numeric format using <strong>MIB databases</strong>, handling vendor-specific edge cases.
+                      Implemented a <strong>server-side feature flag framework</strong> for the Device Types Manager, enabling controlled SaaS tenant 
+                      rollouts through database migrations, API schema updates, backend configuration, and frontend integration.
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-gray-700 leading-relaxed">
-                      Integrated <strong>requestd</strong> and <strong>mibd</strong> into the validation flow, resolving discrepancies across distributed components (UI → PHP → Go → requestd → mibd).
+                      Resolved UI state-management issues in the Device Group Manager by redesigning notification handling logic, eliminating 
+                      persistent permission-related error popups and ensuring correct behavior across repeated delete operations.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Investigated and fixed metadata rendering defects by identifying incorrect URL detection logic that rendered IPv6 addresses 
+                      as hyperlinks; added <strong>Playwright regression tests</strong> to validate rendering behavior.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Unified <strong>SNMP OID validation</strong> across distributed services by integrating MIB-based resolution into the request flow, 
+                      ensuring consistent validation across UI, API, and backend components.
                     </p>
                   </li>
                 </ul>
@@ -327,7 +349,7 @@ export default function Portfolio() {
                   <p className="text-gray-600">2022 – 2026</p>
                 </div>
                 <div className="mt-4 md:mt-0 text-right">
-                  <div className="text-3xl font-bold text-green-600">9.08</div>
+                  <div className="text-3xl font-bold text-green-600">9.14</div>
                   <div className="text-sm text-gray-600">CGPA / 10</div>
                 </div>
               </div>
@@ -389,8 +411,8 @@ export default function Portfolio() {
               Let's Build Something Amazing
             </h2>
             <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-              Currently interning at IBM ISL (SevOne), working on distributed Go/gRPC systems. Seeking backend/fullstack SDE roles with scale, ownership, and system-level problem solving.
-              Let's connect and create something extraordinary together.
+              Currently working at IBM ISL (SevOne), building production features for enterprise SaaS platform. Experienced in React, TypeScript, Go, gRPC, PostgreSQL, and distributed systems. 
+              Open to SDE roles with focus on scalable backend, full-stack development, and system design.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">

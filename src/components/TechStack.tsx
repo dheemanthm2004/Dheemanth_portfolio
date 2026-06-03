@@ -4,29 +4,39 @@ import { motion } from 'framer-motion'
 
 const techCategories = [
   {
-    title: "Frontend",
-    description: "Building beautiful, responsive user interfaces with modern frameworks and cutting-edge design systems",
-    icons: "ts,js,react,nextjs,tailwind"
+    title: "Languages",
+    description: "Core programming languages for systems, backend, and frontend development",
+    icons: "go,ts,py,cpp",
+    emoji: null,
+    skills: ["Go", "TypeScript", "Python", "C++", "SQL"]
   },
   {
-    title: "Backend", 
-    description: "Crafting robust server-side applications with scalable databases and efficient data processing",
-    icons: "nodejs,express,mongodb,postgres,redis,prisma"
+    title: "Frontend", 
+    description: "Building responsive, modern user interfaces with React ecosystem and design systems",
+    icons: "react,nextjs,tailwind",
+    emoji: null,
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
   },
   {
-    title: "Systems & Protocols",
-    description: "Building high-performance distributed systems with Go, gRPC microservices, and low-level network protocols",
-    icons: "go,php,linux"
+    title: "Backend & Databases",
+    description: "Building scalable server-side applications with Node.js, Express, and robust data persistence",
+    icons: "nodejs,express,postgres,redis,mongodb",
+    emoji: null,
+    skills: ["Node.js", "Express", "PostgreSQL", "Redis", "MongoDB", "BullMQ", "Firestore"]
   },
   {
-    title: "DevOps & Deployment",
-    description: "Streamlining development workflows with containerization and cloud deployment strategies",
-    icons: "docker,vercel,git,github"
+    title: "Tools & Infrastructure",
+    description: "DevOps, containerization, version control, and cloud deployment workflows",
+    icons: "git,docker,vercel",
+    emoji: null,
+    skills: ["Git", "Docker", "Railway", "Vercel", "Render", "JWT"]
   },
   {
-    title: "AI & Analytics",
-    description: "Integrating intelligent features with LLMs and creating insightful data visualizations",
-    icons: "ai,py"
+    title: "Testing & Protocols",
+    description: "End-to-end testing, microservices communication, and API development",
+    icons: "playwright",
+    emoji: "🧪",
+    skills: ["Playwright", "gRPC", "REST APIs", "Protocol Buffers", "Unit Testing"]
   }
 ]
 
@@ -48,7 +58,7 @@ export default function TechStack() {
             My arsenal of technologies and tools that I use to bring ideas to life
           </p>
           
-          {/* Animated Tech Icons */}
+          {/* Main Tech Stack Visual Banner */}
           <motion.div 
             className="flex justify-center mb-8"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -58,7 +68,7 @@ export default function TechStack() {
           >
             <div className="relative">
               <img 
-                src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,redis,docker,tailwind,prisma,go,php,vercel,git,github,ai,py" 
+                src="https://skillicons.dev/icons?i=go,ts,py,cpp,react,nextjs,nodejs,express,postgres,redis,mongodb,docker,tailwind,git,vercel,playwright&perline=8" 
                 alt="Tech Stack"
                 className="max-w-full h-auto rounded-2xl shadow-2xl border-4 border-white/50"
               />
@@ -70,7 +80,7 @@ export default function TechStack() {
           </motion.div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -86,24 +96,42 @@ export default function TechStack() {
               
               <div className="relative z-10">
                 <div className="text-center mb-6">
+                  {/* Real Technology Icons or Emoji */}
                   <motion.div
                     className="inline-block mb-4"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
                   >
-                    <img 
-                      src={`https://skillicons.dev/icons?i=${category.icons}`}
-                      alt={category.title}
-                      className="mx-auto h-16 w-auto"
-                    />
+                    <div className="flex items-center justify-center gap-2">
+                      <img 
+                        src={`https://skillicons.dev/icons?i=${category.icons}&theme=light`}
+                        alt={category.title}
+                        className="h-16 w-auto"
+                      />
+                      {category.emoji && (
+                        <div className="text-5xl">{category.emoji}</div>
+                      )}
+                    </div>
                   </motion.div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">
                     {category.title}
                   </h3>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed text-center group-hover:text-gray-700 transition-colors duration-300">
+                <p className="text-sm text-gray-600 leading-relaxed text-center mb-6 group-hover:text-gray-700 transition-colors duration-300">
                   {category.description}
                 </p>
+                
+                {/* Skills Tags */}
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {category.skills.map((skill) => (
+                    <span 
+                      key={skill} 
+                      className="px-3 py-1 bg-gradient-to-r from-purple-50 to-blue-50 text-purple-700 text-xs font-medium rounded-full border border-purple-100 hover:border-purple-300 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
               
               {/* Decorative corner */}
@@ -112,7 +140,7 @@ export default function TechStack() {
           ))}
         </div>
 
-        {/* Additional Tech Details */}
+        {/* Additional Tech Details - Highlight Section */}
         <motion.div
           className="mt-16 relative"
           initial={{ opacity: 0, y: 20 }}
@@ -120,10 +148,23 @@ export default function TechStack() {
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-        
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">💡 Currently Learning & Exploring</h3>
+              <div className="flex flex-wrap gap-3 justify-center">
+                {["Distributed Systems", "Microservices Architecture", "System Design", "gRPC", "Protocol Buffers", "Advanced Go", "Cloud Native"].map((tech) => (
+                  <span 
+                    key={tech} 
+                    className="px-4 py-2 bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 text-sm font-semibold rounded-full border border-orange-200 shadow-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
   )
 }
-
