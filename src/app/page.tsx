@@ -256,7 +256,7 @@ export default function Portfolio() {
                         <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5 animate-pulse"></span>
                         Current
                       </span>
-                      <span className="text-sm text-gray-500">Jan 2025 – Present</span>
+                      <span className="text-sm text-gray-500">Jan 2026 – Present</span>
                     </div>
                   </div>
                   <div className="mt-4 md:mt-0">
